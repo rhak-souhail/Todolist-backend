@@ -124,8 +124,10 @@ Pour assurer la validité des données entrantes, j'ai utilisé les décorateurs
 
 *Solution :* Séparer proprement la logique create / update dans TaskRepository au lieu de mélanger les types Prisma avancés.
 
-Frontend
+## Frontend
+
 Le frontend associé à cette API est disponible à l'adresse suivante :
+
 https://github.com/rhak-souhail/Todolist-frontend
 
 ## Support
