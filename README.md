@@ -93,6 +93,14 @@ J'ai mis en place une gestion des erreurs centralisée pour capturer et traiter 
 Validation des données
 Pour assurer la validité des données entrantes, j'ai utilisé les décorateurs de validation de NestJS, tels que @IsString() et @IsNotEmpty(), dans les DTOs.
 
+
+## ⚠ Problèmes rencontrés & solutions
+
+### ❌ Prisma: erreur XOR lors de la création d’une tâche
+*Cause :* Le champ id n’existe pas dans TaskCreateInput.
+
+*Solution :* Séparer proprement la logique create / update dans TaskRepository au lieu de mélanger les types Prisma avancés.
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
