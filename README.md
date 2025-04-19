@@ -59,6 +59,29 @@ $ yarn run test:cov
 ```
 Todo App - Backend
 
+## Stack technique
+NestJS comme framework backend
+
+Prisma pour l'accès à la base de données MySQL
+
+Base de données : MySQL j'ai créer la base de donnée hdmtestdev
+
+Utilisation de Yarn comme gestionnaire de paquets
+
+Architecture orientée Use Cases pour séparer la logique métier
+
+## Installation
+Cloner le dépôt GitHub et se positionner dans le dossier du projet.
+
+Installer les dépendances avec la commande yarn install.
+
+Configurer les accès à la base de données dans le fichier .env.
+
+Exécuter les migrations Prisma pour créer les tables nécessaires.
+
+Lancer le serveur avec yarn start:dev.
+
+## architecture
 J'ai opté pour une architecture inspirée de la Clean Architecture, avec une séparation claire entre les couches :
 
 Controllers : gestion des routes HTTP.
@@ -70,7 +93,7 @@ Repositories : accès aux données via Prisma.
 DTOs : transfert de données entre les couches.
 
 Cette structure m'a permis de maintenir un code organisé et facilement testable.
-```
+
 ## Fonctionnalités
 
 Le backend offre les endpoints suivants :
@@ -82,7 +105,7 @@ POST /tasks : créer une nouvelle tâche.
 PATCH /tasks/:id : mettre à jour une tâche existante.
 
 DELETE /tasks/:id : supprimer une tâche.
-```
+
 ## Choix techniques et défis rencontrés
 Utilisation de Prisma
 Prisma pour sa simplicité et sa génération automatique de types TypeScript. Cela m'a permis de bénéficier d'une autocomplétion efficace et de réduire les erreurs liées aux types.
@@ -100,6 +123,10 @@ Pour assurer la validité des données entrantes, j'ai utilisé les décorateurs
 *Cause :* Le champ id n’existe pas dans TaskCreateInput.
 
 *Solution :* Séparer proprement la logique create / update dans TaskRepository au lieu de mélanger les types Prisma avancés.
+
+Frontend
+Le frontend associé à cette API est disponible à l'adresse suivante :
+https://github.com/rhak-souhail/Todolist-frontend
 
 ## Support
 
